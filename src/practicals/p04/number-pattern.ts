@@ -1,4 +1,4 @@
-const N: number = parseInt(prce.argv[2]);
+export const N: number = parseInt(prce.argv[2]);
 
 if (isNaN(N) || N <= 0) {
     console.log("Please a number");
