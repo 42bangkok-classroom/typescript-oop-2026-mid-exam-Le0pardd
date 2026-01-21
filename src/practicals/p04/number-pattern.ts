@@ -1,20 +1,18 @@
-export function printPattern(input: any) {
-    const N = parseInt(input);
+const N: number = parseInt(prce.argv[2]);
 
-    if (isNaN(N) || N <= 0) {
-        return;
+if (isNaN(N) || N <= 0) {
+    console.log("Please a number");
+    process.exit(1);
+}
+for (let i = 1; i <= N; i++) {
+    let line = "";
+    
+    for (let j = N; j > N - i; j--) {
+        line += j;
     }
-
-    for (let i = 1; i <= N; i++) {
-        let line = "";
-        
-        for (let j = 1; j <= i; j++) {
-            line += j;
-        }
-        T
-        const spaces = " ".repeat(N - i);
-        console.log(spaces + line);
-    }
+    
+    const spaces = " ".repeat(N - i);
+    console.log(spaces + line);
 }
 
 
