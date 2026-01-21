@@ -1,4 +1,4 @@
-const n =Number(ProcessingInstruction.arguments[2]);
+const n =Number(process.arguments[2]);
 
 if (!isNaN(n) && n >0) {
 for (let i =1; i <= n; i++) {
