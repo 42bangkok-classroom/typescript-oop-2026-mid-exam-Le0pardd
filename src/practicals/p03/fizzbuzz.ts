@@ -1,8 +1,10 @@
-export function fizzbuzz(n: any) {
-    if (typeof n !== 'number' || n <= 0) {
-      return; 
+export function fizzbuzz(input: any) {
+    const n = Number(input);
+    if (Number.isNaN(n) || n <= 0) {
+      return;
     }
   
+   
     for (let i = 1; i <= n; i++) {
       if (i % 3 === 0 && i % 5 === 0) {
         console.log("FizzBuzz");
