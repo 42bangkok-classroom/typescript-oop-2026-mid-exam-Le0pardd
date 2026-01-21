@@ -1,4 +1,3 @@
-
 export function getUniqueNumbers(arr1: number[], arr2: number[]): number[] {
     
     const combined = [...arr1, ...arr2];
