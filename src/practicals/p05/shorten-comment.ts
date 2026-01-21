@@ -1,22 +1,19 @@
-const comment = "TypeScript is a strongly typed programming language"
+import * as process from 'process';
 
-function shortenComment(comment: string): string {
-  if (!comment || comment.trim() === "") {
-    return "";
-  }
+export function shortenComment(comment: string): string {
   
-  const words = comment.split(" ");
- 
-  const filteredWords = words.filter(word => {
-    const length = word.length;
-    return length >= 5 && length <= 10;
-  });
-  
-  if (filteredWords.length === 0) {
-    return "";
-  }
-  
-  return filteredWords.join(" ");
+    if (!comment || comment.trim() === "") {
+        return "";
+    }
+
+    const words = comment.split(/\s+/);
+
+    const filteredWords = words.filter(word => word.length >= 5 && word.length <= 10);
+
+    return filteredWords.join(" ");
 }
 
-console.log(shortenComment(comment));
+const inputArgument = process.argv[2];
+if (inputArgument !== undefined) {
+    console.log(shortenComment(inputArgument));
+}
